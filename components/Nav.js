@@ -30,9 +30,12 @@ export const navData = [
 import { useRouter } from "next/router";
 
 const Nav = () => {
+  const router = useRouter();
+  const pathName = router.pathname;
+
   return (
     <nav>
-      <div>
+      <div className="flex w-full xl:flex-col items-center justify-between xl:justify-center gap-y-10 px-4 md:px-40 xl:px-0 h-80 xl:h-max py-8 bg-white/10 backd">
         {navData.map((link, index) => {
           return (
             <Link key={link.name} href={link.path}>
