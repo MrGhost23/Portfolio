@@ -12,8 +12,7 @@ import TopLeftImg from "./TopLeftImg";
 
 const Layout = ({ children }) => {
   return (
-    <div className="page">
-      <TopLeftImg />
+    <div className={`page ${sora.variable} font-sora relative`}>
       <Navbar />
       <Header />
       {children}
